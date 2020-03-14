@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Team Tool</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		*{color: #2b2f4b;}*{transition: 0.5s all;}
+		body{background-color: #f8f8f8}
+		input{font-size: 24px;color: #333;}
+		.marginr{text-align: center;margin: 0 auto;margin-top:80px;}
+		select{border-radius:15px; transition:all 0.65s ease; border: 1px; width: auto; height: 37px; background-color: rgb(255, 255, 255,0.8); } 
+		li{list-style: none;margin: 8px;}
+		ul{padding: 0;}
+		ul p{text-align: center;width: 60%;margin: 0 auto;box-shadow: -1px 1px 2px -1px #222;}
+	</style>
+</head>
+<body>
+	<div class="marginr">
+		<div>
+			<div>
+				<a href="https://minecraft-zh.gamepedia.com/%E8%AE%B0%E5%88%86%E6%9D%BF#.E9.98.9F.E4.BC.8D" target="_">更多在wiki</a>
+				<span>版本:</span>
+				<select>
+						<option>1.12.X</option>
+						<option>-</option>
+					</select>
+			</div>
+				<div>
+					<span>队伍名称:</span>
+					<input type="text" name="teamname" title="放手自动生成" id="teamname">
+					<p id="addteam">等待输入(~/-\~)</p>
+					<p id="emptyteam">等待输入(~/-\~)</p>
+					<p id="jointeam">等待输入(~/-\~)</p>
+					<p id="leaveteam">等待输入(~/-\~)</p>
+					<p id="teamlist">等待输入(~/-\~)</p>
+				</div>
+					<div>
+						<h2>队伍设置</h2>
+						<ul id="textlist">
+							<h1>以下是1.13以上如果需要1.12请在指令输入/scoreboard</h1>
+							<li>team modify <队伍> color <值>
+								<p>
+									<span>将把队伍中所有成员在聊天框，头上，Tab菜单与侧边栏的名字染色。合法的颜色有：black、dark_blue、dark_green、dark_aqua、dark_red、dark_purple、gold、gray、dark_gray、blue、green、aqua、red、light_purple、yellow和white。还有一个合法的颜色是reset（名字以默认颜色和格式显示）。
+									</span>
+								</p>
+								<p>
+									<span>填写的队伍必须存在，且值必须是合法颜色值。
+									</span>
+								</p>
+							</li>
+							<li>
+							team modify <队伍> friendlyfire <true|false>
+								<p>
+									<span>它的默认模式，true，对PVP机制没有影响。然而，当设置成false时，将保护玩家不受同队伍成员间的混战攻击，弓箭和瞬间伤害喷溅药水的伤害。但依然会受到他人负面状态效果的打击。</span>
+								</p>
+								<p>
+								<span>
+									填写队伍必须存在，设置必须是布尔值true或false。
+								</span></p>
+							</li>
+							<li>
+								team modify <队伍> nametagVisibility <never|hideForOtherTeams|hideForOwnTeam|always>
+								<p>
+									<span>
+										控制指定队伍队伍的成员名称牌的可见性，默认为always。设置为never时，队伍中任何成员的头上都不会出现名称牌。设置为"hideForOtherTeams"时，队伍中成员的名称牌将不对队伍外的玩家显示。设置为hideForOwnTeam时，只有玩家本队其他成员的名称牌将被隐藏。设置为always时，所有名称牌都可见。
+									</span>
+								</p>
+								<p>
+									<span>
+										填写的队伍必须存在，且设置必须是never、hideForOtherTeams、hideForOwnTeam或always。
+									</span>
+								</p>
+							</li>
+							<li>
+								team modify <队伍> deathMessageVisibility <never|hideForOtherTeams|hideForOwnTeam|always>
+								<p>
+									<span>
+										控制指定队伍team成员死亡信息的可见性，默认为always。设置为never时，队伍中任何成员的死亡信息都不会出现聊天框。设置为hideForOtherTeams时，只有队伍外的玩家的死亡信息会被隐藏。设置为hideForOwnTeam时，只有玩家本队其他成员的死亡信息将被隐藏。设置为always时，所有死亡信息都会出现在聊天框。
+									</span>
+								</p>
+								<p>
+									<span>
+										填写的队伍必须存在，且设置必须是never、hideForOtherTeams、hideForOwnTeam或always。
+									</span>
+								</p>
+							</li>
+							<li>
+								team modify <队伍> collisionRule <always|never|pushOwnTeam|pushOtherTeams>
+								<p>
+									<span>
+										控制队伍队伍成员的碰撞模式，默认为always。设置为never时，队伍中任何成员都不会与玩家或生物发生碰撞。设置为pushOwnTeam时，队伍中的成员只能推撞本队的玩家与生物。设置为pushOtherTeams时，队伍中的成员只能推撞其他队伍的玩家与生物。设置为always时，所有玩家与生物都会被推撞。
+									</span>
+								</p>
+								<p>
+									<span>
+										队伍必须存在，设置必须为never、pushOwnTeam、pushOtherTeams或always。
+									</span>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<a href="https://minecraft-zh.gamepedia.com/%E8%AE%B0%E5%88%86%E6%9D%BF#.E9.98.9F.E4.BC.8D" target="_">更多在wiki</a>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.js"></script>
+<script type="text/javascript">
+	$('#teamname').blur(function(){
+		var inputval = $('#teamname').val();
+		inputval = inputval.replace(/[/\~!<>@#\$%^&*()-+_=:¿L?]/g, "");
+		console.log(inputval.replace(/[/\~!<>@#\$%^&*()-+_=:¿L?]/g, ""));
+		$('#teamname').val(inputval);
+		$('#addteam').text('队伍添加:/scoreboard team add ' + inputval +" "+ inputval+" /最后一个名称是显示队伍的名称为XXX");
+		$('#emptyteam').text('队伍删除:/scoreboard team empty ' + inputval);
+		$('#jointeam').text('加入队伍:/scoreboard team join ' + inputval);
+		$('#leaveteam').text('移除某玩家当前队伍:/scoreboard team join ' + inputval);
+		$('#teamlist').text('查看队伍:/scoreboard team list ' + inputval);
+	})
+</script>
+</html>
