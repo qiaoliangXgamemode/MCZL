@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+<!-------<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">------>
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+<head>
+	<style type="text/css">
+																																/*公开模板免费使用*/
+		/*背景颜色*/
+		body{background:#f8f8f8;}
+		/*文章设置*/
+		.text-div{width: 60%;height: 100%;background:#fff;margin: 0 auto;padding: 16px;}
+		/*文字设置*/
+		p{margin:0 auto;font-size: 24px;width:auto;}
+		/*图片定位*/
+		.text-div-img{margin: 0 auto;text-align: center;}
+		/*文章设置*/
+		.div-fyle{height: 100%;}
+		/*作者头像设置*/
+		.text-div-img img{width: 48px;height: 48px;border-radius: 100%;}
+		/*文字设置*/
+		.div-height{height: 100%;}
+		/**/
+		/*文章图片设定*/
+		.div-height img{width: 25%;height: 180px;}
+		/*列表设置*/
+		.div-height li{list-style-type: none;}
+		/*html高度适应*/
+		html,body{height: 100%;}
+		/*自定义h1*/
+		h1{text-align: center;}
+		/*自定义li*/
+		li{margin: 0 auto;word-break: break-all;}
+		/*自定义ul*/
+		ul{background: #f5f5f5;padding: 16px;}
+	</style>
+	<title>HELLO,(*^▽^*)</title>
+</head>
+<body>
+	<div>
+		<div class="text-div">
+				<div class="div-fyle">
+					<div class="text-div-img">
+						<a href=""><img src="./../img/1.jpg"></a>
+						<p>作者:381</p>
+					</div>
+				</div>
+				<hr>
+			<div class="div-height">
+				<h1>[转载] 替换行为的删除物品</h1>
+				<p>&nbsp;&nbsp;
+					3/9日又是烦恼的一天 / 大家好 瞄~ qnq,你是否见识过替换行为的删除物品,我跟你说这种行为只有会沙雕的人所做，我希望你们不会怎么做。
+				</p>
+				<p style="text-align: center;">
+					>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+				</p>
+				<h2>
+					原理:
+					<font size="6" style="margin: 0 auto;">利用任务栏最后一格进行替换成一个矿车，不过玩家可以利用这个矿车进行大部分刷矿车，在基础上做优化基本能解决，不过太水导致很多bug。pnp
+					</font>
+				</h2>
+				<ul>
+					<h2>代码部分:</h2>
+					<li>循环：/replaceitem entity @a slot.container.8  hopper_minecart</li>
+					<li>连锁：/clear @a hopper_mineca</li>
+					<h2>ooc:</h2>
+					<li>/summon falling_block ~ ~1.5 ~ {Time:1,Block:"minecraft:redstone_block",Motion:[0d,-1d,0d],Passengers:[{id:falling_block,Time:1,Block:"minecraft:activator_rail",Passengers:[{id:commandblock_minecart,Command:"blockdata ~ ~-2 ~ {auto:0b,Command:\"\"}"},{id:commandblock_minecart,Command:"setblock ~2 ~7 ~0 chain_command_block 1 replace {Command:\"/tellraw @a[score_OOPk_min=50,score_OOPk=50] [\\\"\\\",{\\\"text\\\":\\\"点击收获指令书\\\",\\\"color\\\":\\\"aqua\\\",\\\"underlined\\\":true,\\\"clickEvent\\\":{\\\"action\\\":\\\"run_command\\\",\\\"value\\\":\\\"/trigger DIpoos set 3\\\"}}]\",auto:1b}"},{id:commandblock_minecart,Command:"setblock ~2 ~6 ~0 chain_command_block 1 replace {Command:\"/scoreboard players set @a[score_OOPk_min=5000,score_OOPk=5000] OOPk 0\",auto:1b}"},{id:commandblock_minecart,Command:"setblock ~2 ~5 ~0 chain_command_block 1 replace {Command:\"/scoreboard players add @a OOPk 1\",auto:1b}"},{id:commandblock_minecart,Command:"setblock ~2 ~4 ~0 chain_command_block 1 replace {Command:\"/scoreboard players set @a[score_DIpoos_min=3,score_DIpoos=3] DIpoos 0\",auto:1b}"},{id:commandblock_minecart,Command:"setblock ~2 ~3 ~0 chain_command_block 1 replace {Command:\"/give @a[score_DIpoos_min=3,score_DIpoos=3] written_book 1 0 {pages:[\\\"[\\\\\\\"\\\\\\\",{\\\\\\\"text\\\\\\\":\\\\\\\"删除背包的全部东西【请慎用】\\\\\\\",\\\\\\\"color\\\\\\\":\\\\\\\"gold\\\\\\\",\\\\\\\"underlined\\\\\\\":true,\\\\\\\"clickEvent\\\\\\\":{\\\\\\\"action\\\\\\\":\\\\\\\"run_command\\\\\\\",\\\\\\\"value\\\\\\\":\\\\\\\"/trigger DIpoos set 1\\\\\\\"},\\\\\\\"insertion\\\\\\\":\\\\\\\"/trigger DIpoos set 1\\\\\\\"},{\\\\\\\"text\\\\\\\":\\\\\\\"指令书被清理了办，答：每次都会显示一个收获指令书的聊天。\\\\\\\",\\\\\\\"color\\\\\\\":\\\\\\\"none\\\\\\\",\\\\\\\"underlined\\\\\\\":false}]\\\"],title:Book,author:TellrawGenerator}\",auto:1b}"},{id:commandblock_minecart,Command:"setblock ~2 ~2 ~0 chain_command_block 1 replace {Command:\"/scoreboard objectives add OOPk dummy\",auto:1b}"},{id:commandblock_minecart,Command:"setblock ~2 ~1 ~0 chain_command_block 1 replace {Command:\"/scoreboard players set @a[score_DIpoos_min=1,score_DIpoos=1] DIpoos 0\",auto:1b}"},{id:commandblock_minecart,Command:"setblock ~2 ~0 ~0 chain_command_block 1 replace {Command:\"/clear @a[score_DIpoos_min=1,score_DIpoos=1]\",auto:1b}"},{id:commandblock_minecart,Command:"setblock ~2 ~-1 ~0 chain_command_block 1 replace {Command:\"/scoreboard players enable @a DIpoos\",auto:1b}"},{id:commandblock_minecart,Command:"setblock ~2 ~-2 ~0 repeating_command_block 1 replace {Command:\"/scoreboard objectives add DIpoos trigger 清理选择\",auto:1b}"},{id:commandblock_minecart,Command:"setblock ~ ~1 ~ command_block 0 replace {auto:1b,Command:\"fill ~ ~ ~ ~ ~-2 ~ air\"}"},{id:commandblock_minecart,Command:"kill @e[type=commandblock_minecart,r=1]"}]}]}
+					</li>
+				</ul>
+					<h2>高清转载图:</h2>
+					<a style="text-align: center;"><img src="./img/1.png" style="width: 100%;height: 100%;"></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<!-------<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>---->
+</body>
+</html>
